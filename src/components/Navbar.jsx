@@ -26,24 +26,21 @@ const linkVariants = {
   initial: { opacity: 0, y: -10 },
   animate: { opacity: 1, y: 0, transition: { delay: 0.1, type: "spring", stiffness: 100 } },
   hover: {
-    scale: 1.15,
-    color: "#fff",
-    textShadow: "0px 0px 16px #38bdf8, 0px 0px 8px #fff",
+    scale: 1.04,
+    color: "#06b6d4",
     transition: { type: "spring", stiffness: 300 },
   },
   active: {
-    scale: 1.18,
-    color: "#38bdf8",
-    textShadow: "0px 0px 24px #38bdf8, 0px 0px 8px #fff",
+    scale: 1.06,
+    color: "#06b6d4",
     transition: { type: "spring", stiffness: 400 },
   },
 };
 
 const socialVariants = {
   hover: {
-    scale: 1.2,
-    boxShadow: "0px 0px 12px #38bdf8, 0px 0px 4px #fff",
-    color: "#38bdf8",
+    scale: 1.12,
+    color: "#06b6d4",
     transition: { type: "spring", stiffness: 300 },
   },
 };
@@ -122,10 +119,10 @@ const Navbar = () => {
             >
               <button
                 onClick={() => handleNavClick(link.href, link.name)}
-                className={`font-medium px-2 py-1 rounded transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400/40 relative group text-white/90 ${active === link.name ? "text-cyan-400" : "hover:text-cyan-300"}`}
+                className={`font-medium px-2 py-1 rounded transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400/40 relative group text-white/90 ${active === link.name ? "text-cyan-400" : "hover:text-cyan-400"}`}
               >
                 {link.icon ? (
-                  <span className="inline-block align-middle mr-1 text-cyan-400 group-hover:scale-110 transition-transform duration-200">
+                  <span className="inline-block align-middle mr-1 text-cyan-400 group-hover:scale-105 transition-transform duration-200">
                     {link.icon}
                   </span>
                 ) : null}
@@ -187,12 +184,12 @@ const Navbar = () => {
                     <motion.button
                       key={link.name}
                       onClick={() => handleNavClick(link.href, link.name)}
-                      whileHover={{ scale: 1.12, color: "#38bdf8", textShadow: "0px 0px 16px #38bdf8, 0px 0px 8px #fff" }}
-                      animate={active === link.name ? { scale: 1.15, color: "#38bdf8", textShadow: "0px 0px 24px #38bdf8, 0px 0px 8px #fff" } : {}}
-                      className={`text-white/90 text-xl font-semibold px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-cyan-400/30 w-full text-center bg-white/5 hover:bg-white/10 transition-colors relative group ${active === link.name ? "text-cyan-400" : "hover:text-cyan-300"}`}
+                      whileHover={{ scale: 1.06, color: "#06b6d4" }}
+                      animate={active === link.name ? { scale: 1.08, color: "#06b6d4" } : {}}
+                      className={`text-white/90 text-xl font-semibold px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-cyan-400/30 w-full text-center bg-white/5 hover:bg-white/10 transition-colors relative group ${active === link.name ? "text-cyan-400" : "hover:text-cyan-400"}`}
                     >
                       {link.icon ? (
-                        <span className="inline-block align-middle mr-1 text-cyan-400 group-hover:scale-110 transition-transform duration-200">
+                        <span className="inline-block align-middle mr-1 text-cyan-400 group-hover:scale-105 transition-transform duration-200">
                           {link.icon}
                         </span>
                       ) : null}
