@@ -5,7 +5,7 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className="dark w-full min-h-screen flex flex-col items-center justify-center">
+    <div className="dark w-full min-h-screen">
       <App />
     </div>
   </React.StrictMode>
